@@ -54,7 +54,7 @@ public class MysqlGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir(projectPath + "/sharding-jdbc-read-write-separation/src/main/java");
+        gc.setOutputDir(projectPath + "/sharding-jdbc-shard-table/src/main/java");
         gc.setAuthor("auto-generator");
         gc.setBaseResultMap(true);
         gc.setDateType(DateType.ONLY_DATE);
@@ -90,7 +90,7 @@ public class MysqlGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称
-                return projectPath + "/sharding-jdbc-read-write-separation/src/main/resources/mapper/" + pc.getModuleName()
+                return projectPath + "/sharding-jdbc-shard-table/src/main/resources/mapper/" + pc.getModuleName()
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
